@@ -148,6 +148,20 @@ if __name__ == '__main__':
              [0, 0, 0, 1, 0, 1, 0]]
     g.dijkstra(vertices, edges)
 
+    # Dijkstra's Algorithm Improved
+    print('\n\n# Dijkstra\'s Algorithm Improved #')
+    graph_weighted = {
+        'A': {'B': 5, 'C': 2},
+        'B': {'A': 2, 'C': 7, 'D': 2},
+        'C': {'A': 2, 'B': 7, 'D': 4, 'E': 8},
+        'D': {'B': 8, 'C': 4, 'E': 6, 'F': 4},
+        'E': {'C': 8, 'D': 6, 'F': 3},
+        'F': {'E': 3, 'D': 4},
+    }
+    shortest_dist, shortest_path = g.dijkstra_plus(graph_weighted, 'A', 'F')
+    print(f'Shortest Path: {shortest_path}')
+    print(f'Shortest Distance: {shortest_dist}')
+
     # Bellman Ford Algorithm
     print('\n\n# Bellman Ford Algorithm #')
     g = graph.Graph(5, 0)

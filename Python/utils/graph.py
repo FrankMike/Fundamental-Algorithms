@@ -1,5 +1,6 @@
 import sys
 from collections import defaultdict
+import heapq
 
 INF = 999
 
@@ -86,6 +87,38 @@ class Graph:
             print("Distance of ", chr(ord('a') + i),
                   " from source vertex: ", distance[1])
             i = i + 1
+
+    # Dijkstra Algorithm Improved
+    def dijkstra_plus(self, graph, start_node, end_node):
+        distances = {node: float('infinity') for node in graph}
+        distances[start_node] = 0
+        prev_nodes = {node: None for node in graph}
+        pq = [(0, start_node)]
+        while pq:
+            cur_dist, cur_node = heapq.heappop(pq)
+            # relax neighbor nodes
+            for neighbor, edge in graph[cur_node].items():
+                tentative_dist = cur_dist + edge
+                if tentative_dist < distances[neighbor]:
+                    # add to shortest path
+                    distances[neighbor] = tentative_dist
+                    prev_nodes[neighbor] = cur_node
+                    heapq.heappush(pq, (tentative_dist, neighbor))
+        # only needed if we want to return path (not needed for shortest distance)
+        shortest_path = []
+        cur_node = end_node
+        while cur_node != start_node:
+            try:
+                shortest_path.insert(0, cur_node)
+                cur_node = prev_nodes[cur_node]
+            except Exception:
+                print(end_node + ' not reachable for ' + start_node)
+                break
+        shortest_path.insert(0, start_node)
+        print(distances)
+        print(prev_nodes)
+        return distances[end_node], shortest_path
+
 
     # Bellman Ford Algorithm
     def bellman_ford(self, src):
