@@ -1,5 +1,4 @@
 import utils.searching as searching
-import utils.list_tools as listtools
 import utils.sorting as sorting
 import utils.graph as graph
 import utils.tree as tree
@@ -16,7 +15,7 @@ if __name__ == '__main__':
     print('# Linear Search #\n')
     arr = [2, 3, 4, 10, 40]
     key = 10
-    print(f'Array: {listtools.list_to_string(arr)}')
+    print('Array: ' + ' '.join(str(a) for a in arr))
     print(f'Key: {key}')
     print('Iterative Implementation')
     linear_search_result = searching.linear_search(arr, key)
@@ -41,7 +40,7 @@ if __name__ == '__main__':
     if result != -1:
         print(f'Element is present at index {result}')
     else:
-        print(f'Element is not present in array')
+        print('Element is not present in array')
     print('Iterative Implementation')
     searching.binary_search_iterative(arr, key)
 
@@ -110,7 +109,6 @@ if __name__ == '__main__':
 
     # Kruskal's Algorithm (MST Minimum Spanning Tree)
     print('# Kruskal\'s Algorithm (MST Minimum Spanning Tree) #')
-    vertices = 6
     g = graph.Graph(6, 0)
     g.add_edge(0, 1, 4)
     g.add_edge(0, 2, 4)
@@ -314,7 +312,7 @@ if __name__ == '__main__':
 
     # Quick select Algorithm
     print('\n# Quick Select Algorithm #')
-    arr = [ 10, 4, 5, 8, 6, 11, 26 ]
+    arr = [10, 4, 5, 8, 6, 11, 26]
     n = len(arr)
     k = 3
     print(f'Given array: {arr}')
@@ -344,23 +342,25 @@ if __name__ == '__main__':
     print('\n# Union Find Algorithm #')
     g = basics.Graph(3)
     g.add_edge(0, 1)
+    g.add_edge(0, 2)
     g.add_edge(1, 2)
     g.add_edge(2, 0)
-    # TODO: Print Graph
+    g.add_edge(2, 3)
+    g.add_edge(3, 3)
+    print(g)
     if g.is_cyclic():
         print("Graph contains cycle")
     else:
         print("Graph does not conain cycle")
 
     # Euclid's Algorithm
-    print('\n# Euclid\'s Algorithm #')
+    print('\n\n# Euclid\'s Algorithm #\n')
     print("Basic algorithm")
     a = 10
     b = 15
     gcd = basics.euclid(a, b)
     print(f"GCD: {a}, {b} = {gcd}")
-    print("Extended Algorithm")
+    print("\nExtended Algorithm")
     a, b = 35, 15
     g, x, y = basics.euclid_extended(a, b)
-    print(f'GCD({a}, {b}) = {g}')
-
+    print(f'GCD({a}, {b}) = {g}\n')

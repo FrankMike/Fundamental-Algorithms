@@ -1,4 +1,4 @@
-# **Fundamental Algorithms**
+# Fundamental Algorithms
 
 ## Searching:
 - Linear Search
@@ -45,8 +45,8 @@
 
 # Algorithm analysis
 
-## **Searching**
-### **Linear search:**
+## Searching
+### *Linear search:*
 
 A ***linear*** search or ***sequential*** search seaquentially checks each element of a list until a match is found or the whole list has been searched.
 
@@ -67,7 +67,7 @@ end procedure
 Linear search is simple to implement, it can be used whether the array/list is sorted or not and can be used on arrays/lists of any data type.
 It's well suited for small datasets but has a time complexity of O(n), which makes it slow for large datasets.
 
-### **Binary search:**
+### *Binary search:*
 Also known as ***half-interval search***, ***logarithmic search***, or ***binary chop***, is a search algorithm that finds the position of a target value within a **sorted array**.
 
 **Binary search** compares the target value to the middle element of the array. If they are not equal, the half in which the target cannot lie is eliminated and the search continues on the remaining half, again taking the middle element to compare to the target value, and repeating this until the target value is found. If the search ends with the remaining half being empty, the target is not in the array.
@@ -114,7 +114,7 @@ binarySearch(arr, x, low, high)
 Faster than linear search, especially for large arrays.
 The loogaithmic time in the worst case scenario is O(log n), however the array must be sorted. This adds at least an additional O(n log n) time complexity for the sorting step.
 
-### **Breadth First Search (BFS):**
+### *Breadth First Search (BFS):*
 
 ***Breadth-First Search (BFS)*** is an algorithm for searching a ***tree*** data structure for a node that satisfies a given property.
 
@@ -147,7 +147,7 @@ The time complexity is O(V+E) where V is the number of Nodes of Vertices and E i
 The auxiliary space complexity is O(V) in the worst case scenario.
 
 
-### **Depth First Search (DFS):**
+### *Depth First Search (DFS):*
 
 Algorithm used for traversing or searching ***tree*** or ***graph*** data structures. DFS starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.
 Extra memory, usually a stack, is needed to keep track of the nodes discovered so far along a specific branch wich helps in backtracking of the graph.
@@ -175,8 +175,8 @@ The time complexity is O(V+E) where V is the number of Nodes of Vertices and E i
 The auxiliary space complexity is O(V) in the worst case scenario.
 
 
-## **Sorting**
-### **Insertion Sort:**
+## Sorting
+### *Insertion Sort:*
 ***Insertion Sort*** is a sorting algorithm that builds the final sorted array/list one item at a time by comparisons. It's much less efficient on large lists
 The time complexity is quadratic O(n^2).
 Insertion sort iterates, consuming one input element each repetition, and grows a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
@@ -195,7 +195,7 @@ end procedure
  ```
  [Insertion Sort](https://www.programiz.com/dsa/insertion-sort)
 
- ### **Heap Sort:**
+ ### *Heap Sort:*
 
 Heap sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to the selection sort where we first find the minimum element and place the minimum element at the beginning. Repeat the same process for the remaining elements.
 Pseudocode for Heap Sort:
@@ -259,7 +259,7 @@ The time complexity of Heap Sort is O(n log n).
 
 [Heap Sort](https://www.programiz.com/dsa/heap-sort)
 
-### **Selection Sort:**
+### *Selection Sort:*
 
 Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list. The algorithm repeatedly selects the smallest (or largest) element from the unsorted portion of the list and swaps it with the first element of the unsorted portion. This process is repeated for the remaining unsorted portion of the list until the entire list is sorted. One variation of selection sort is called “Bidirectional selection sort” that goes through the list of elements by alternating between the smallest and largest element, this way the algorithm can be faster in some cases.
 
@@ -297,7 +297,7 @@ end procedure
 
 [Selection Sort](https://www.programiz.com/dsa/selection-sort)
 
-### **Merge Sort:**
+### *Merge Sort:*
 
 Merge sort is a sorting algorithm that works by dividing an array into smaller subarrays, sorting each subarray, and then merging the sorted subarrays back together to form the final sorted array.
 
@@ -380,7 +380,7 @@ Time complexity of Merge Sort is O(n log n) in the worst case scenario.
 [Merge Sort](https://www.programiz.com/dsa/merge-sort)
 
 
-### **Counting Sort:**
+### *Counting Sort:*
 
 Counting sort is an algorithm for sorting a collection of objects according to keys that are small positive integers; that is, it is an integer sorting algorithm.
 Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (a kind of hashing). Then do some arithmetic operations to calculate the position of each object in the output sequence. 
@@ -410,7 +410,7 @@ Time complexity of Counting sort is O(n+k) where k is the range of the non-negat
 
 [Counting Sort](https://www.programiz.com/dsa/counting-sort)
 
-### **Quick Sort:**
+### *Quick Sort:*
 
 QuickSort is a Divide and Conquer algorithm. It picks an element as a pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways. 
 - Always pick the first element as a pivot.
@@ -468,8 +468,8 @@ partition (arr[], low, high)
 
 [Quick Sort](https://www.programiz.com/dsa/quick-sort)
 
-## **Graph**
-### **Kruskal's Algorithm:**
+## Graph
+### *Kruskal's Algorithm:*
 
 Kruskal's algorithm is a minimum spanning tree algorithm that takes a graph as input and finds the subset of the edges of that graph which
 - form a tree that includes every vertex
@@ -503,7 +503,7 @@ The time complexity Of Kruskal's Algorithm is: O(E log E).
 [Kruskal's Algorithm](https://www.programiz.com/dsa/kruskal-algorithm)
 
 
-### **Dijkstra's Algorithm:**
+### *Dijkstra's Algorithm:*
 
 Dijkstra's algorithm allows us to find the shortest path between any two vertices of a graph.
 
@@ -543,7 +543,7 @@ Space Complexity: O(V)
 [Dijkstra's Algorithm](https://www.programiz.com/dsa/dijkstra-algorithm)
 
 
-### **Bellman Ford's Algorithm:**
+### *Bellman Ford's Algorithm:*
 
 Bellman Ford algorithm helps us find the shortest path from a vertex to all other vertices of a weighted graph.
 
@@ -576,7 +576,7 @@ The time complexity on worst case scenario O(VE).
 [Bellman Ford's Algorithm](https://www.programiz.com/dsa/bellman-ford-algorithm)
 
 
-### **Floyd-Warshall Algorithm:**
+### *Floyd-Warshall Algorithm:*
 
 Floyd-Warshall Algorithm is an algorithm for finding the shortest path between all the pairs of vertices in a weighted graph. This algorithm works for both the directed and undirected weighted graphs. But, it does not work for the graphs with negative cycles (where the sum of the edges in a cycle is negative)
 
@@ -596,7 +596,7 @@ return A
 [Floyd-Warshall Algorithm](https://www.programiz.com/dsa/floyd-warshall-algorithm)
 
 
-### **Topological Sorting for Directed Acyclic Graph (DAG):**
+### *Topological Sorting for Directed Acyclic Graph (DAG):*
 
 Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the ordering.
 
@@ -621,7 +621,7 @@ Auxiliary space: O(V), The extra space is needed for the 2 stacks used
 [Topological Sorting for Directed Acyclic Graph (DAG)](https://www.geeksforgeeks.org/topological-sorting/)
 
 
-### **Flood Fill Algorithm:**
+### *Flood Fill Algorithm:*
 
 Flood fill, also called seed fill, is a flooding algorithm that determines and alters the area connected to a given node in a multi-dimensional array with some matching attribute.
 
@@ -636,7 +636,7 @@ Check the pixels adjacent to the current pixel and push into the queue if valid 
 [Flood Fill Algorithm](https://www.geeksforgeeks.org/flood-fill-algorithm/)
 
 
-### **Lee Algorithm:**
+### *Lee Algorithm:*
 
 The algorithm, also known as Shortest path in a Binary Maze, is a breadth-first based algorithm that uses queues to store the steps. It usually uses the following steps:
 
@@ -659,7 +659,7 @@ For each of its four adjacent cells, if the value is 1 and they are not visited 
 
 [Lee Algorithm](https://www.geeksforgeeks.org/shortest-path-in-a-binary-maze/)
 
-### **Kahn's Topological Sorting Algorithm:**
+### *Kahn's Topological Sorting Algorithm:*
 
 Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge uv, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG.
 
@@ -671,7 +671,7 @@ The queue needs to store all the vertices of the graph. So the space required is
 [Kahn's Topological Sorting Algorithm](https://www.geeksforgeeks.org/topological-sorting-indegree-based-solution/)
 
 
-## **Tree Traversals**
+## *Tree Traversals*
 
 Traversing a tree means visiting every node in the tree. You might, for instance, want to add all the values in the tree or find the largest one. For all these operations, you will need to visit each node of the tree.
 
@@ -679,28 +679,28 @@ Linear data structures like arrays, stacks, queues, and linked list have only on
 
 [Tree Traversals](https://www.programiz.com/dsa/tree-traversal)
 
-### **Pre Order:**
+### *Pre Order:*
 
 Visit root node
 Visit all the nodes in the left subtree
 Visit all the nodes in the right subtree
 
-### **In Order:**
+### *In Order:*
 
 First, visit all the nodes in the left subtree
 Then the root node
 Visit all the nodes in the right subtree
 
-### **Post Order:**
+### *Post Order:*
 
 Visit all the nodes in the left subtree
 Visit all the nodes in the right subtree
 Visit the root node
 
 
-## **Arrays**
+## Arrays
 
-### **Kadane's Algorithm:**
+### *Kadane's Algorithm:*
 
 Dynamic Programming is a method for solving a complex problem by breaking it down into a collection of simpler subproblems, solving each of those subproblems just once, and storing their solutions using a memory-based data structure (array, map, etc.). So the next time the same sub-problem occurs, instead of recomputing its solution, one simply looks up the previously computed solution, thereby saving computation time.
 
@@ -726,7 +726,7 @@ return max_so_far
 [Kadane's Algorithm](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)
 
 
-### **Floyd's Cycle Detection Algorithm:**
+### *Floyd's Cycle Detection Algorithm:*
 
 Floyd’s cycle finding algorithm or Hare-Tortoise algorithm is a pointer algorithm that uses only two pointers, moving through the sequence at different speeds. This algorithm is used to find a loop in a linked list. It uses two pointers one moving twice as fast as the other one. The faster one is called the faster pointer and the other one is called the slow pointer.
 
@@ -747,7 +747,7 @@ Auxiliary Space: O(1), only two pointers are used therefore constant space compl
 [Floyd's Cycle Detection Algorithm](https://www.geeksforgeeks.org/floyds-cycle-finding-algorithm/)
 
 
-### **KMP Algorithm:**
+### *KMP Algorithm:*
 
 Pattern searching is an important problem in computer science. When we do search for a string in a notepad/word file or browser or database, pattern-searching algorithms are used to show the search results. We have discussed the Naive pattern-searching algorithm in the previous post. 
 The worst-case complexity of the Naive algorithm is O(m(n-m+1)). The time complexity of the KMP algorithm is O(n) in the worst case. KMP (Knuth Morris Pratt) Pattern Searching.
@@ -759,7 +759,7 @@ The basic idea behind KMP’s algorithm is: whenever we detect a mismatch (after
 [KMP Algorithm for Pattern Searching](https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/)
 
 
-### **Quick select Algorithm:**
+### *Quick select Algorithm:*
 
 Quickselect is a selection algorithm to find the k-th smallest element in an unordered list. It is related to the quick sort sorting algorithm.
 
@@ -787,7 +787,7 @@ function quickSelect(list, left, right, k)
 
 [Quick Select Algorithm](https://www.geeksforgeeks.org/quickselect-algorithm/)
 
-### **Boyer-Moore Majority Vote Algorithm:**
+### *Boyer-Moore Majority Vote Algorithm:*
 
 The Boyer-Moore voting algorithm is one of the popular optimal algorithms which is used to find the majority element among the given elements that have more than N/ 2 occurrences. This works perfectly fine for finding the majority element which takes 2 traversals over the given elements, which works in O(N) time complexity and O(1) space complexity.
 
@@ -798,9 +798,9 @@ First, choose a candidate from the given set of elements if it is the same as th
 [Boyer-Moore Majority Vote Algorithm](https://www.geeksforgeeks.org/boyer-moore-majority-voting-algorithm/)
 
 
-## **Basics**
+## Basics
 
-### **Huffman Coding Compression Algorithm:**
+### *Huffman Coding Compression Algorithm:*
 
 Huffman Coding is a technique of compressing data to reduce its size without losing any of the details. It was first developed by David Huffman.
 
@@ -836,7 +836,7 @@ Extracting minimum frequency from the priority queue takes place 2*(n-1) times a
 [Huffman Coding Compression Algorithm](https://www.programiz.com/dsa/huffman-coding)
 
 
-### **Union Find Algorithm:**
+### *Union Find Algorithm:*
 
 A union-find algorithm is an algorithm that performs two useful operations on such a data structure:
 
@@ -849,7 +849,7 @@ Auxiliary Space: O(1).
 [Union Find Algorithm](https://www.geeksforgeeks.org/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/)
 
 
-### **Euclid's Algorithm:**
+### *Euclid's Algorithm:*
 
 The Euclidean algorithm is a way to find the greatest common divisor of two positive integers. GCD of two numbers is the largest number that divides both of them. A simple way to find GCD is to factorize both numbers and multiply common prime factors.
 
@@ -863,8 +863,30 @@ The extended Euclidean algorithm updates the results of gcd(a, b) using the resu
 Time Complexity: O(log N)
 Auxiliary Space: O(log N)
 
-
 [Euclidean Algorithm](https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/)
+
+### *Fermat's little theorem:*
+
+Fermat's little theorem states that p is a prime number, then for any integer a, the number a^p - a is an integer multiple of p.
+a^p is equivalent to a(mod p).
+
+```
+// returns a^b mod(MOD) (a to the power b mod MOD)
+func modular_exponentiation(a, b, MOD)
+	ans = 1
+	a = a mod(MOD)
+	while b is more than 0
+		if b is an odd number
+			ans = (ans * a) mod(MOD)
+		a = (a * a) mod(MOD)
+		b = b / 2
+	return ans
+// it’s assumed that input m is a prime number
+print(modular_exponentiation(a, m-2, m))
+```
+
+[Fermat's little theorem](https://en.wikipedia.org/wiki/Fermat%27s_little_theorem)
+
 
 # Thanks to
 

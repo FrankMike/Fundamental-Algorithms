@@ -1,5 +1,6 @@
 from sys import maxsize
 
+
 # Linked List structure
 class Node:
     def __init__(self, d) -> None:
@@ -31,7 +32,7 @@ def kadane(a, size):
 # Floyd Cycle Detection Algorithm
 def floyd_cycle_detection(head):
     temp = head
-    while (temp.next != None):
+    while temp.next is not None:
         temp = temp.next
     temp.next = head
     if detect_loop(head):
@@ -43,12 +44,13 @@ def floyd_cycle_detection(head):
 def detect_loop(head):
     slow_pointer = head
     fast_pointer = head
-    while slow_pointer != None and fast_pointer != None and fast_pointer.next != None:
+    while slow_pointer is not None and fast_pointer is not None and fast_pointer.next is not None:
         slow_pointer = slow_pointer.next
         fast_pointer = fast_pointer.next.next
         if slow_pointer == fast_pointer:
             return 1
     return 0
+
 
 # KMP Algorithm
 def kmp(pat, txt):
@@ -70,7 +72,8 @@ def kmp(pat, txt):
                 j = lps[j-1]
             else:
                 i += 1
-    
+
+
 def compute_lps_array(pat, m, lps):
     l = 0
     i = 1
@@ -89,7 +92,7 @@ def compute_lps_array(pat, m, lps):
 
 # Quick Select Algorithm
 def quick_select(arr, l, r, k):
-    if k>0 and k<=r-l+1:
+    if 0 < k <= r-l+1:
         index = partition(arr, l, r)
         if index - l == k - 1:
             return arr[index]
@@ -97,6 +100,7 @@ def quick_select(arr, l, r, k):
             return quick_select(arr, l, index-1, k)
         return quick_select(arr, index+1, r, k-index+l-1)
     print("Index out of bound")
+
 
 def partition(arr, l, r):
     x = arr[r]
@@ -108,12 +112,13 @@ def partition(arr, l, r):
     arr[i], arr[r] = arr[r], arr[i]
     return i
 
+
 # Boyer-Moore Majority Vote Algorithm
 def boyer_moore(arr, n):
     candidate = -1
     votes = 0
     for i in range(n):
-        if (votes == 0):
+        if votes == 0:
             candidate = arr[i]
             votes = 1
         else:

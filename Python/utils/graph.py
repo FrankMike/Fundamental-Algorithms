@@ -119,7 +119,6 @@ class Graph:
         print(prev_nodes)
         return distances[end_node], shortest_path
 
-
     # Bellman Ford Algorithm
     def bellman_ford(self, src):
         dist = [float("Inf")] * self.V
@@ -144,7 +143,7 @@ class Graph:
                         distance[i][j], distance[i][k] + distance[k][j])
         for i in range(V):
             for j in range(V):
-                if (distance[i][j] == INF):
+                if distance[i][j] == INF:
                     print("INF", end=" ")
                 else:
                     print(distance[i][j], end=" ")
@@ -155,14 +154,14 @@ class Graph:
         visited = [False] * self.V
         stack = []
         for i in range(self.V):
-            if visited[i] == False:
+            if visited[i] is False:
                 self.topological_sort_util(i, visited, stack)
         print(stack)
 
     def topological_sort_util(self, v, visited, stack):
         visited[v] = True
         for i in self.adjacencies[v]:
-            if visited[i] == False:
+            if visited[i] is False:
                 self.topological_sort_util(i, visited, stack)
         stack.insert(0, v)
 
@@ -173,8 +172,7 @@ class Graph:
         return True
 
     def flood_fill(self, screen, m, n, x, y, prevc, newc):
-        queue = []
-        queue.append([x, y])
+        queue = [[x, y]]
         screen[x][y] = newc
         while queue:
             curr_node = queue.pop()
@@ -199,7 +197,7 @@ class Graph:
 
     # Kahn's Topological Sorting Algorithm
     def kahn_topological_sort(self):
-        in_degree = [0]*(self.V)
+        in_degree = [0] * self.V
         for i in self.adjacencies:
             for j in self.adjacencies[i]:
                 in_degree[j] += 1
@@ -216,7 +214,6 @@ class Graph:
                 in_degree[i] -= 1
                 if in_degree[i] == 0:
                     queue.append(i)
-
             cnt += 1
         if cnt != self.V:
             print("There exists a cycle in the graph")
@@ -233,7 +230,7 @@ class Pair:
 
 # Lee's Algorithm
 def is_safe(mat, visited, x, y):
-    return (x >= 0 and x < len(mat) and y >= 0 and y < len(mat[0]) and mat[x][y] == 1 and (not visited[x][y]))
+    return 0 <= x < len(mat) and 0 <= y < len(mat[0]) and mat[x][y] == 1 and (not visited[x][y])
 
 
 def find_shortest_path(mat, visited, i, j, x, y, min_dist, dist):
